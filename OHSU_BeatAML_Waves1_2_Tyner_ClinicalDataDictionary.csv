@@ -1,0 +1,157 @@
+lab_Id,Unique identifier for each Specimen,
+PatientId,Unique  identifier for each Patient,
+inferred_sex,Sex for each Patient inferred from RNAseq data using a set of 28 differentially expressed genes,Inferred sex can be discrepant with sex as determined through the EMR if Patient was post-BMT or an older male with a missing Y.  Gender from the EMR was used in all analyses
+consensus_sex,Sex description for each Patient obtained from the EMR and filled in with inferred sex information using RNAseq data and a set of 28 differentially expressed genes,
+inferred_ethnicity,Ethnicity for each Patient inferred from genomic data using a  methodology developped by Zheng and Weir (2015) ,
+ageAtDiagnosis,Difference in years between diagnosis date on Disease Instance and date of birth on Patient,Blank: Unable to obtain date of birth and/or date of diagnosis
+isRelapse,If Specimen is obtained at time of relapsed disease,Consensus call for isRelapsed after manual review
+isDenovo,If Specimen is obtained at the time of de novo disease,
+isTransformed,If Patient transformed from another heme malignancy before or at the time of Specimen collection,
+finalFusion,Cytogenetic fusions described in the EMR and manually reviewed ,Manual review process is described in the Supplemental Material and Methods section; Cytogeneic fusions described for the sample or described in additional samples from the same Patient + 7 days in the future and - infinity; None means no fusions described; Unknown means no information was available to assess fusion presence
+specificDxAtAcquisition_MDSMPN,Patient's specific diagnosis at inclusion was MDS/MPN related specific diagnosis,True if at least 1 Diagnosis History record on Disease Instance has instance of diagnosis of Myelodysplastic/Myeloproliferative neoplasms 
+nonAML_MDSMPN_specificDxAtAcquisition,"Patient's specific diagnosis at inclusion was not AML, MDS or MPN related specific diagnosis",
+priorMalignancyNonMyeloid,If Patient had a prior non-myeloid malignancy ,Yes if:  Patient had a prior non-myeloid malignancy 
+priorMalignancyType,Type of prior non-myeloid malignancy,All instances  are listed in the order they were described in the EMR (separated by vertical bars); Disease instances can be duplicated due to multiple treatment regiments
+cumulativeChemo, If Patient has ever received chemotherapy during the course of their treatment,Yes if:  Patient has ever received chemotherapy during the course of their treatment; Note: Includes chemotherapy for the current malgnancy
+priorMalignancyRadiationTx,If Patient has received radiation treatment for a prior non-heme malignancy,Yes if: Patient received radiation treatment for a prior malignancy (non- heme)
+priorMDS,If Patient was ever diagnosed with MDS,Yes if:  Patient was ever diagnosed with MDS
+priorMDSMoreThanTwoMths,If Patient was diagnosed with MDS at least two months prior to AML diagnosis,Yes if: Date difference between earliest MDS diagnosis and AML Diagnosis Date is greater than 2 months
+priorMDSMPN,If Patient was ever diagnosed with MDS/MPN,Yes if:  Patient was ever diagnosed with MDS/MPN
+priorMDSMPNMoreThanTwoMths,If Patient was diagnosed with MDS/MPN at least two months prior to AML diagnosis,Yes if:Date difference between earliest MDS/MPN diagnosis and AML Diagnosis Date is greater than 2 months
+priorMPN,If Patient was ever diagnosed with MPN,Yes if: Patient was ever diagnosed with MPN
+priorMPNMoreThanTwoMths,If Patient was diagnosed with MPN at least two months prior to AML diagnosis ,Yes if:Date difference between earliest MPN diagnosis  and AML Diagnosis Date is greater than 2 months
+dxAtInclusion,Diagnosis at time of earliest Specimen inclusion by collection date,
+specificDxAtInclusion,Specific Diagnosis at time of earliest Specimen inclusion by collection date,
+ELN2017,Risk classification assigned to the Specimen based on European Leukemia Network 2017 guidelines ,Unknown = not enough information to deterrmine classification
+ELN2008 ,Risk classification assigned to the Specimen based on European Leukemia Network 2008 guidelines,
+dxAtSpecimenAcquisition,Diagnosis at time of Specimen acquisition.,
+specificDxAtAcquisition,Specific Diagnosis at time of Specimen acquisition.,
+ageAtSpecimenAcquisition,Difference in years between Specimen collection date and date of birth of Patient,
+timeOfSampleCollectionRelativeToInclusion,Difference in days between the earliest Specimen collection and the date of this sample collection,
+SpecimenGroups,Concatenated list of Specimen groups on Specimen referring to disease stage ,
+SpecimenType,"Type of Specimen (peripheral blood, bone marrow, or leukapheresis sample)",
+rnaSeq,If RNAseq was performed on the Specimen,Yes if: RNAseq was performed on the Specimen
+exomeSeq,If Whole Exome Sequencing was performed on the Specimen,Yes if: Whole Exome Sequencing was performed on the Specimen
+totalDrug,If Ex vivo functional drug testing was performed on the Specimen,Yes if: Ex vivo functional drug testing was performed on the Specimen
+rnaSeqAnalysis,If RNAseq data for the Specimen was used in the aggregate analysis ,Yes if: RNAseq data for the Specimen was used in the aggregate analysis 
+analysisExomeSeq,If Whole exome sequencing data for the Specimen was used in the aggregate analysis,Yes if: Whole exome sequencing data for the Specimen was used in the aggregate analysis
+analysisDrug,If Drug testing data for the Specimen was used in the aggregate analysis,Yes if: Drug testing data for the Specimen was used in the aggregate analysis
+cumulativeTreatmentTypeCount,The unique number of treatment types for the Disease instance,
+cumulativeTreatmentTypes,Concatenated list of unique treatment types for the Disease instance,Blank: no treatment type number indicated; Unknown: number of treatment type is one but treatment unknown 
+cumulativeTreatmentRegimenCount,Unique number of chemotherapy treatment regiments for the Disease instance,
+cumulativeTreatmentRegimens,Concatenated list of unique chemotherapy treatment regiments for the Disease instance,
+cumulativeTreatmentStageCount,Unique number of treatment stages for the Disease instance,
+cumulativeTreatmentStages,Concatenated list of unique treatment stages for the Disease instance,
+responseToInductionTx,Treatment Response corresponding to the first treatment record found with a stage of induction,
+typeInductionTx,Treatment Type corresponding to the first treatment record found with a stage of induction,
+responseDurationToInductionTx,Days between start and end date of the first treatment record found with a stage of induction,"Empty if no induction treatment exists; If the end date is not recorded, -1 is returned"
+mostRecentTreatmentType,Treatment type of the most recent treatment determined by start date,"Empty if no treatment type exists;  If the end date is not recorded, -1 is returned; None: no treatments are recorded"
+currentRegimen,Regimen of the most current treatment determined by start date,None:  no treatments are recorded; None: no treatments are recorded
+currentStage,Stage of the most current treatment determined by start date,None:  no treatments are recorded; Blank: no treatment information exists
+mostRecentTreatmentDuration,Days between start and end date of the most current treatment determined by start date,"Empty if no induction treatment exists. If the end date is not recorded, -1 is returned"
+vitalStatus,Patient vital status at the date of most recent follow-up,Unknown: unknown or lost to followup
+overallSurvival,"If vitalStatus is Dead or Alive, the calculated days between the diagnosis date and the followup date found when determining vitalStatus",Blank: vital status is unknown; -1: if the diagnosis date does not exist and overall Survival cannot be calculated;          0: if there was no follow-up after the date of diagnosis
+causeOfDeath,If the vitalStatus is Dead then assessment of  cause of death,Alive: not applicable; Dead: Disease: Death related to disease; Dead: Other: Death not associated with disease; Dead: Treatment: Death associated with treatment administered to combat disease; Dead: Unknown: Death with unknown cause; Blank: if the vitalStaus is unknown
+any_different_labs,If lab data from a different Specimen was used for this Specimen,True: if lab results were pulled from a different Specimen for this Patient according to specific parameters 
+any_different_labs_also_beataml,If lab data from a different Specimen also found in the Beat AML cohort was used for this Specimen,True: if lab results were pulled from a different Specimen for this Patient and that Specimen is in this Patient cohort
+different_lab_ids,Specimen from which the labs were taken,Specimen ID   if results are from another Specimen
+different_id_karyotype_interval,Difference in days of karyotype result reported and date of Specimen acquisition,
+%.Basophils.in.PB,% Basophils in the peripheral blood ,Lab values were taken from Specimens +/- 1 day from the Specimen date of acquisition; Blank: Values unknown
+%.Blasts.in.BM,% Blast in the bone marrow ,Blank: Values unknown
+%.Blasts.in.PB,% Blast in the  peripheral blood ,Blank: Values unknown
+%.Eosinophils.in.PB,% Eosinophils in the peripheral blood ,Blank: Values unknown
+%.Immature.Granulocytes.in.PB,% Immature Granulocytes in the peripheral blood ,Blank: Values unknown
+%.Lymphocytes.in.PB,% Lymphocytes in the peripheral blood ,Blank: Values unknown
+%.Monocytes.in.PB,% Monocytes in the peripheral blood ,Blank: Values unknown
+%.Neutrophils.in.PB,% Neutrophils in the peripheral blood ,Blank: Values unknown
+%.Nucleated.RBCs.in.PB,% Nucleated RBCs in the peripheral blood ,Blank: Values unknown
+ALT,Alanine aminotransferase levels in the peripheral blood (units/litre),Blank: Values unknown
+AST,Aspartate aminotransferase levels in the peripheral blood (units/litre),Blank: Values unknown
+Albumin,Albumin levels in the peripheral blood  (g/dL),Blank: Values unknown
+Creatinine,Creatinine levels in the peripheral blood (mg/dL),Blank: Values unknown
+FAB/Blast.Morphology,FAB  classification of the Specimen if noted in the EMR, +/- 1 day from the Specimen acquistion date; Blank: no information found in EMR; Note: Column AB pulls from the Specimen regardless of date wherease this column pulls using the lab window
+Hematocrit,Hemocrit levels (%) ,Blank: Values unknown
+Hemoglobin,Hemoglobin levels (%),Blank: Values unknown
+Karyotype,Karyotype pulled from the cytogenetics report found in the EMR,Karyotype described for the sample or described in additional samples from the same Patient + 7 days in the future and - infinity; If multiple karyotypes existed the one closest to the sample acquisition date was used
+LDH,Lactic acid dehydrogenase (LDH) levels (Units/Litre),Blank: Values unknown
+MCV,Mean corpuscular volume (fL),Blank: Values unknown
+Other.Cytogenetics,FISH results pulled from cytogenetics report in EMR,Blank: Values unknown
+Platelet.Count,Number of platelets (per Litre),Blank: Values unknown
+Surface.Antigens.(Immunohistochemical.Stains),Surface antigens as determined by clinical flow ,Blank: Values unknown
+Total.Protein,Total protein levels in the blood (g/dL) ,Blank: Values unknown
+WBC.Count,White blood cell count expressed in international units (x10^9 cells/litre),
+any_different_cgs,Alternative cytogenetics associated with a specific sample,Yes: if cytogenetics results were pulled from a different Specimen for this Patient according to the +7 day/ - infinity window
+any_different_cgs_also_beataml,Alternative cytogenetics for the Patient pulled from Specimens from the same cohort,Yes: if cytogenetics results were pulled from a different Specimen for this Patient and that Specimen is in the Beat AML cohort
+different_cgs_lab_ids,Specimen from which the alternative cytogenetics were taken,
+FLT3-ITD_consensus,Consensus call for FLT3 -ITD used in the analysis,"Positive: consensus call was FLT3-ITD positive; Note: If the clinical and internal were discordant and WES results matched the clinical results, then we would manually review"
+NPM1_consensus,Consensus call for NPM1 used in the analysis,"Positive: consensus call was NPM1 mutation positive; Note: If the clinical and internal were discordant and WES results matched the clinical results, then we would manually review"
+ABL1,Clinical gene mutation testing results,Negative: tested but no mutation identified; Blank: no information available; Mutations: location and amino acid change/frameshift/insertion identified; MAF: minor allele frequency (%)
+ASXL1,All the same except for CEBPA,All the same except for CEBPA
+ASXL2,,
+ATM,,
+BCOR,,
+BCORL1,,
+BRAF,,
+BRCA2,,
+CALR,,
+CBL,,
+CCND2,,
+CCND3,,
+CD36,,
+CEBPA, Clinical gene mutation testing results,
+CHEK2,,
+CIITA,,
+CREBBP,,
+CSF3R,,
+CTCF,,
+CUX1,,
+DNMT3A,,
+EP300,,
+ETV6,,
+EZH2,,
+FBXW7,,
+FLT3,,
+GATA1,,
+GATA2,,
+IDH1,,
+IDH2,,
+IKZF1,,
+JAK1,,
+JAK2,,
+JAK3,,
+KDM6A,,
+KIT,,
+KMT2A,,
+KMT2D,,
+KRAS,,
+MEN1,,
+MPL,,
+MUTYH,,
+MYD88,,
+NF1,,
+NOTCH1,,
+NRAS,,
+PAX5,,
+PDGFRB,,
+PHF6,,
+POT1,,
+PRDM1,,
+PTPN11,,
+RAD21,,
+ROS1,,
+RUNX1,,
+SETBP1,,
+SF3B1,,
+SMC1A,,
+SOCS1,,
+SRSF2,,
+STAG2,,
+STAT3,,
+SUZ12,,
+TCL1A,,
+TET2,,
+TP53,,
+TYK2,,
+U2AF1,,
+WT1,,
+ZRSR2,,
