@@ -1,0 +1,17 @@
+column_name,column_description
+gene_name,canonical gene name for the OpenCell target
+uniprot_id,corresponding Uniprot protein ID
+protein_name,corresponding Uniprot protein name
+ensg_id,corresponding Ensembl gene ID
+enst_id,Ensembl transcript ID used for design
+tagged_terminus,site for mNG11 tag insertion
+insertion_justification_type,type of information for how the insertion site was chosen
+insertion_justification_reference,specific information supporting the choice of insertion site
+insertion_justification_notes,notes relating to insertion site
+protospacer_sequence,nucleotide sequence of the Cas9 gRNA protospacer used for genomic cleavage
+hdr_donor_sequence,nucleotide sequence of homology ssODN donor provided for templating homology directed repair
+fwd_genomic_primer,nucleotide sequence of the forward primer used for genotyping PCR
+rev_genomic_primer,nucleotide sequence of the reverse primer used for genotyping PCR
+fraction_wt_alleles,genotype analysis of the selected polyclonal pool for the corresponding OpenCell target: fraction of unedited alleles (wild-type) for the OpenCell target
+fraction_mng11_integrated_alleles,genotype analysis of the selected polyclonal pool for the corresponding OpenCell target: fraction of mNG11-integrated alleles (the desired insertion product) for the OpenCell target
+fraction_other_alleles,genotype analysis of the selected polyclonal pool for the corresponding OpenCell target: fraction of alleles harboring non-functional mutations for the OpenCell target

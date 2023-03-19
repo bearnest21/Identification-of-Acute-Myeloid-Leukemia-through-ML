@@ -1,0 +1,6 @@
+column_name,column_description
+target_name,canonical gene name for the OpenCell target
+ensg_id,Ensembl gene ID for the OpenCell target
+annotations_grade_3,all grade 3 annotations for the OpenCell target
+annotations_grade_2,all grade 2 annotations for the OpenCell target
+annotations_grade_1,all grade 1 annotations for the OpenCell target

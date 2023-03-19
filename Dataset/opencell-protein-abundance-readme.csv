@@ -1,0 +1,9 @@
+column_name,column_description
+gene_name,canonical gene name
+ensg_id,corresponding Ensembl gene ID
+enst_id,corresponding Ensembl transcript ID
+uniprot_id,corresponding Uniprot protein ID
+protein_name,canonical protein name
+hek_rna_tpm,transcript expression level from RNASeq analysis in transcript per million (tpm)
+hek_protein_conc_nm,intracellular protein concentration measured by mass spectrometry (in nmole/L)
+hek_protein_copy_number,protein copy number per cell measured by mass spectrometry

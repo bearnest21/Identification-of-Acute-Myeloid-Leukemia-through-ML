@@ -1,0 +1,10 @@
+column_name,column_description
+target_gene_name,canonical gene name for the OpenCell target (pull-down bait)
+interactor_gene_name,canonical gene name for the interactor (pull-down prey)
+target_ensg_id,Ensembl gene ID for the OpenCell target
+interactor_ensg_id,Ensembl gene ID for the OpenCell prey
+interactor_uniprot_ids,Uniprot gene IDs for all interactor proteins/isoforms identified in the mass-spectrometry
+pval,p-value for enrichment (Student's t-test for triplicate set)
+enrichment,enrichment of a specific interactor in the target's pull-down
+interaction_stoichiometry,stoichiometry of abundance between bait and prey in a given pull-down
+abundance_stoichiometry,stoichiometry of abundance between bait and prey in the whole cell
