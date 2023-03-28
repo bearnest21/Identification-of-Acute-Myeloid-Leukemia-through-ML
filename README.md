@@ -17,7 +17,9 @@ The goal is to build a predictive model that can determine AML protein of intere
 
 ## Datasets:
 OHSU_BeatAMLWaves_1_2_ClinicalSummary & opencell_protein_interactions csv files. 
+
 *Note: We will be using two datasets for our project.
+
 Source data will come from the Chan Zuckerberg Biohub OpenCell database and Beat AML program derived from the Cancer Target Discovery and Development Data Portal.
 
 ## Description of datasets:
