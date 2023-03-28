@@ -1,4 +1,4 @@
-# Blood Cancer Research (BCR) - Data Science Cloud Computing
+# Building AML with an Exploratory Machine Learning Model
 
 ## Team members: 
 
