@@ -14,7 +14,7 @@ Our group represents Blood Cancer Research (BCR), a non-profit institute aiming 
 ## Objective:
 The goal is to create a predictive model that can determine AML protein of interest through identification of protein-protein interactions. In doing so, we propose to build a machine learning algorithm that identifies AML key proteins from data sets derived from Chan Zuckerberg’s Biohub OpenCell database and the Cancer Target Discovery and Development Data Portal’s Beat AML program. This is also done to support the effort to advance blood cancer exploratory work with the intent to increase blood cancer survival rate through enhanced drug target repertoire.
 
-## Noneobjective:
+## Non-objective:
 Blood Cancer Research is not intentionally classifying characteristics that potentially create biased representation against groups of people. Any patient information is anonymized. The creation of the ML model is only intended to identify potential proteins of interest. Identified proteins need further rigorous scientific and clinical research peer review. 
 
 ## Datasets:
