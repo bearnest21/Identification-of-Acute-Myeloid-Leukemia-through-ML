@@ -28,4 +28,4 @@ The Beat AML Clinical Summary data set features 159 attributes, which comprises 
 The tables range from 11kB to 4.6MB of datasets. The data as CSV files will be uploaded and stored in a Github repository. The data will also be stored in Amazon S3, which will involve creating and specifying a bucket within Amazon Web Services (AWS) Region before the data is uploaded to the specified bucket as objects in S3.
 
 ## Programming Languages:
-AWS Cloud Computing Services (SageMaker Studio, S3, Athena, Glue Crawler), Jupyter Notebooks/Python
+AWS Cloud Computing Services (SageMaker Studio, S3, Athena, Glue Crawler)
