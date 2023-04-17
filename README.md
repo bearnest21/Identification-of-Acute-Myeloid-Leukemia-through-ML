@@ -8,6 +8,10 @@
 
 -Gabriella Rivera
 
+## Company Name: Blood Cancer Research (BCR)
+## Company Industry: Drug Research
+## Company Size: 200 Employees
+
 ## Background: 
 Our group represents Blood Cancer Research (BCR), a non-profit institute aiming to discover novel drug targets against various hematologic cancers. We have been tasked by the U.S. Department of Health & Human Services to research target proteins and develop novel drugs that disrupt pathways connected to progression of Acute Myeloid Leukemia (AML). 
 
